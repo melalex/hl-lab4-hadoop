@@ -1,6 +1,6 @@
 # Lab 4
 
-Result are available in the output.txt [output.txt](output.txt)
+Results are available in the output.txt [output.txt](output.txt)
 
 ## Download hadoop lib
 
