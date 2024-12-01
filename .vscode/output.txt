@@ -1,0 +1,151 @@
+~/W/hl-lab4-hadoop main• 42.1s | 1 ❱ 
+./task.sh
+Compiling ProcessUnits.java...
+warning: [options] source value 7 is obsolete and will be removed in a future release
+warning: [options] target value 7 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+Compilation successful.
+added manifest
+adding: hadoop/(in = 0) (out= 0)(stored 0%)
+adding: hadoop/ProcessUnits$E_EMapper.class(in = 1965) (out= 818)(deflated 58%)
+adding: hadoop/ProcessUnits$E_EReduce.class(in = 1661) (out= 693)(deflated 58%)
+adding: hadoop/ProcessUnits.class(in = 1565) (out= 768)(deflated 50%)
+JAR file created: ProcessUnits.jar
+Creating HDFS input directory...
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug namenode
+    Learn more at https://docs.docker.com/go/debug-cli/
+Copying sample.txt to HDFS...
+Successfully copied 2.05kB to namenode:/tmp/sample.txt
+2024-12-01 18:56:25,109 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug namenode
+    Learn more at https://docs.docker.com/go/debug-cli/
+Verifying file in HDFS input directory...
+Found 1 items
+-rw-r--r--   3 root supergroup        219 2024-12-01 18:56 /input_dir/sample.txt
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug namenode
+    Learn more at https://docs.docker.com/go/debug-cli/
+Copying and running MapReduce program...
+Successfully copied 5.12kB to namenode:/tmp/ProcessUnits.jar
+2024-12-01 18:56:30,548 INFO client.RMProxy: Connecting to ResourceManager at resourcemanager/172.18.0.3:8032
+2024-12-01 18:56:30,714 INFO client.AHSProxy: Connecting to Application History server at historyserver/172.18.0.4:10200
+2024-12-01 18:56:30,750 INFO client.RMProxy: Connecting to ResourceManager at resourcemanager/172.18.0.3:8032
+2024-12-01 18:56:30,750 INFO client.AHSProxy: Connecting to Application History server at historyserver/172.18.0.4:10200
+2024-12-01 18:56:30,929 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2024-12-01 18:56:30,962 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1733079349759_0001
+2024-12-01 18:56:31,046 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2024-12-01 18:56:31,159 INFO mapred.FileInputFormat: Total input files to process : 1
+2024-12-01 18:56:31,178 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2024-12-01 18:56:31,201 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2024-12-01 18:56:31,617 INFO mapreduce.JobSubmitter: number of splits:2
+2024-12-01 18:56:31,765 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+2024-12-01 18:56:31,809 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1733079349759_0001
+2024-12-01 18:56:31,810 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2024-12-01 18:56:31,962 INFO conf.Configuration: resource-types.xml not found
+2024-12-01 18:56:31,963 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2024-12-01 18:56:32,353 INFO impl.YarnClientImpl: Submitted application application_1733079349759_0001
+2024-12-01 18:56:32,384 INFO mapreduce.Job: The url to track the job: http://resourcemanager:8088/proxy/application_1733079349759_0001/
+2024-12-01 18:56:32,385 INFO mapreduce.Job: Running job: job_1733079349759_0001
+2024-12-01 18:56:40,570 INFO mapreduce.Job: Job job_1733079349759_0001 running in uber mode : false
+2024-12-01 18:56:40,572 INFO mapreduce.Job:  map 0% reduce 0%
+2024-12-01 18:56:46,697 INFO mapreduce.Job:  map 50% reduce 0%
+2024-12-01 18:56:47,714 INFO mapreduce.Job:  map 100% reduce 0%
+2024-12-01 18:56:52,783 INFO mapreduce.Job:  map 100% reduce 100%
+2024-12-01 18:56:52,808 INFO mapreduce.Job: Job job_1733079349759_0001 completed successfully
+2024-12-01 18:56:52,896 INFO mapreduce.Job: Counters: 54
+        File System Counters
+                FILE: Number of bytes read=45
+                FILE: Number of bytes written=688351
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=515
+                HDFS: Number of bytes written=24
+                HDFS: Number of read operations=11
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters 
+                Launched map tasks=2
+                Launched reduce tasks=1
+                Rack-local map tasks=2
+                Total time spent by all maps in occupied slots (ms)=21536
+                Total time spent by all reduces in occupied slots (ms)=26552
+                Total time spent by all map tasks (ms)=5384
+                Total time spent by all reduce tasks (ms)=3319
+                Total vcore-milliseconds taken by all map tasks=5384
+                Total vcore-milliseconds taken by all reduce tasks=3319
+                Total megabyte-milliseconds taken by all map tasks=22052864
+                Total megabyte-milliseconds taken by all reduce tasks=27189248
+        Map-Reduce Framework
+                Map input records=5
+                Map output records=5
+                Map output bytes=45
+                Map output materialized bytes=56
+                Input split bytes=186
+                Combine input records=5
+                Combine output records=3
+                Reduce input groups=3
+                Reduce shuffle bytes=56
+                Reduce input records=3
+                Reduce output records=3
+                Spilled Records=6
+                Shuffled Maps =2
+                Failed Shuffles=0
+                Merged Map outputs=2
+                GC time elapsed (ms)=172
+                CPU time spent (ms)=990
+                Physical memory (bytes) snapshot=1082830848
+                Virtual memory (bytes) snapshot=26093199360
+                Total committed heap usage (bytes)=771751936
+                Peak Map Physical memory (bytes)=389804032
+                Peak Map Virtual memory (bytes)=7581528064
+                Peak Reduce Physical memory (bytes)=304115712
+                Peak Reduce Virtual memory (bytes)=10930688000
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters 
+                Bytes Read=329
+        File Output Format Counters 
+                Bytes Written=24
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug namenode
+    Learn more at https://docs.docker.com/go/debug-cli/
+Verifying output files in HDFS output directory...
+Found 2 items
+-rw-r--r--   3 root supergroup          0 2024-12-01 18:56 /output_dir/_SUCCESS
+-rw-r--r--   3 root supergroup         24 2024-12-01 18:56 /output_dir/part-00000
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug namenode
+    Learn more at https://docs.docker.com/go/debug-cli/
+Displaying Part-00000 content...
+2024-12-01 18:56:58,021 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+1981    34
+1984    40
+1985    45
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug namenode
+    Learn more at https://docs.docker.com/go/debug-cli/
+Copying output files to local host system...
+2024-12-01 18:57:00,692 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug namenode
+    Learn more at https://docs.docker.com/go/debug-cli/
+Successfully copied 3.07kB to /Users/alexandermelashchenko/Workspace/hl-lab4-hadoop/output
+All tasks completed. Output files are in ./output
+~/W/hl-lab4-hadoop main• 41.4s ❱ 

@@ -5,7 +5,7 @@ set -e
 
 # Configuration
 JAR_URL="https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-core/1.2.1/hadoop-core-1.2.1.jar"
-OUTPUT_DIR="./libs"
+OUTPUT_DIR="./lib"
 OUTPUT_FILE="${OUTPUT_DIR}/hadoop-core-1.2.1.jar"
 
 # Create the output directory if it doesn't exist

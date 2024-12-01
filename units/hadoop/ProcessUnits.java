@@ -1,3 +1,5 @@
+package hadoop;
+
 import java.util.*;
 import java.io.IOException;
 import org.apache.hadoop.fs.Path;
@@ -19,7 +21,7 @@ public class ProcessUnits {
                 Reporter reporter) throws IOException {
             String line = value.toString();
             String lasttoken = null;
-            StringTokenizer s = new StringTokenizer(line, "\t");
+            StringTokenizer s = new StringTokenizer(line, " ");
             String year = s.nextToken();
 
             while (s.hasMoreTokens()) {

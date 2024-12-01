@@ -1,3 +1,7 @@
 {
-  "java.project.referencedLibraries": ["lib/**/*.jar", "hadoop-core-1.2.1.jar"]
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "lib/hadoop-core-1.2.1.jar"
+  ],
+  "java.project.sourcePaths": ["units"]
 }
